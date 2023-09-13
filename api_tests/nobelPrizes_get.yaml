@@ -17,8 +17,6 @@ scenarios:
     flow:
       - get:
           url: "/nobelPrizes"
-          headers:
-            Authorization: "{{ $processEnvironment.AUTH_TOKEN }}"
           qs:
             offset: "{{ offset }}"
             limit: "{{ limit }}"
@@ -38,8 +36,6 @@ scenarios:
     flow:
       - get:
           url: "/invalidURL"
-          headers:
-            Authorization: "{{ $processEnvironment.AUTH_TOKEN }}"
           qs:
             offset: "{{ offset }}"
             limit: "{{ limit }}"
@@ -58,8 +54,6 @@ scenarios:
     flow:
       - get:
           url: "/nobelPrizes"
-          headers:
-            Authorization: "{{ $processEnvironment.AUTH_TOKEN }}"
           qs:
             offset: "10000000000"
             limit: "10000000000"
