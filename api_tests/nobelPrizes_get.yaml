@@ -3,8 +3,8 @@
 config:
   target: "{{ $processEnvironment.API_HOST }}"
   phases:
-    - duration: 60
-      arrivalRate: 20
+    - duration: 1
+      arrivalRate: 5
   payload:
     path: "nobelPrizes_get.csv"
     fields: ["offset", "limit", "sort", "nobelPrizeYear", "yearTo", "nobelPrizeCategory", "format", "csvLang"]
